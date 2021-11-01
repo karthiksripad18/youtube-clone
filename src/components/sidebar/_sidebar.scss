@@ -53,8 +53,8 @@
 
 @media (max-width: $breakpoint-small) {
     .sidebar {
-        transform: translateX(-100%);
         position: fixed;
+        transform: translateX(-100%);
         z-index: 999;
     }
 }
