@@ -13,8 +13,8 @@ export const login = () => {
         try {
             dispatch({type: LOGIN_REQUEST})
             const provider = new firebase.auth.GoogleAuthProvider();
+            provider.addScope('https://www.googleapis.com/auth/youtube.force-ssl');
             const res = await auth.signInWithPopup(provider);
-            console.log(res);
             const accessToken = res.credential.accessToken;
             const profile = {
                 name: res.additionalUserInfo.profile.name,
