@@ -45,12 +45,12 @@ const Video = ({video}) => {
     }, [channelId])
 
     return (
-        <div className="video">
+        <div className="video" data-test="component-video">
             <div className="video__top">
-                <img src={medium.url} alt="" />
+                <img src={medium.url} alt="" data-test="video-thumbnail-image" />
                 <span>{_duration}</span>
             </div>
-            <div className="video__title">
+            <div className="video__title" data-test="video-title">
                 { title }
             </div>
             <div className="video__details">
@@ -62,8 +62,8 @@ const Video = ({video}) => {
                 </span>
             </div>
             <div className="video__channel">
-                <img src={channelIcon?.url} alt="" />
-                <p>{channelTitle}</p>
+                <img data-test="video-channel-icon" src={channelIcon?.url} alt="" />
+                <p data-test="video-channel-title">{channelTitle}</p>
             </div>
         </div>
     )
